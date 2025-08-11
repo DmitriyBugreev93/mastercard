@@ -2,17 +2,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const startBtn = document.querySelector(".master-top-btn");
   const restartBtn = document.querySelectorAll(".otvet-btn");
   const centerBlock = document.querySelector(".master-center");
-  const scrollTo = document.querySelector('.scroll-start')
+  const scrollTo = document.querySelector(".scroll-start");
   const slideLine = document.querySelector(".slide-line-sp");
   const slideNum = document.querySelector(".slide-num");
-    //================================== Start btn
+  //================================== Start btn
 
-    startBtn.addEventListener("click", () => {
-      startBtn.classList.add("active");
-      centerBlock.classList.add("active");
+  startBtn.addEventListener("click", () => {
+    startBtn.classList.add("active");
+    centerBlock.classList.add("active");
 
-      scrollTo.scrollIntoView({ block: "start", behavior: "smooth" });
-    });
+    scrollTo.scrollIntoView({ block: "start", behavior: "smooth" });
+  });
 
   //================================== Restart btn
 
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let counter = 0;
 
   const answers = [];
-  const names = { a: 'Турция', b: 'Грузия', c: 'ОАЭ', d: 'Италия' };
+  const names = { a: "Турция", b: "Грузия", c: "ОАЭ", d: "Италия" };
 
   allLi.forEach((item) => {
     item.addEventListener("click", function () {
@@ -149,21 +149,33 @@ document.addEventListener("DOMContentLoaded", function () {
       if (cat == "end") {
         centerBlock.classList.remove("active");
 
-        const result = computeWinner(answers, names)
+        const result = computeWinner(answers, names);
         // console.log(result);
         // console.log(answers);
-        
-        if (result.winnerLetter === 'a') {
+
+        if (result.winnerLetter === "a") {
           otvet1.classList.add("active");
+          setTimeout(() => {
+            otvet1.classList.add("anim");
+          }, 200);
           otvet1.scrollIntoView({ block: "start", behavior: "smooth" });
-        } else if (result.winnerLetter === 'b') {
+        } else if (result.winnerLetter === "b") {
           otvet2.classList.add("active");
+          setTimeout(() => {
+            otvet2.classList.add("anim");
+          }, 200);
           otvet2.scrollIntoView({ block: "start", behavior: "smooth" });
-        } else if (result.winnerLetter === 'c') {
+        } else if (result.winnerLetter === "c") {
           otvet3.classList.add("active");
+          setTimeout(() => {
+            otvet3.classList.add("anim");
+          }, 200);
           otvet3.scrollIntoView({ block: "start", behavior: "smooth" });
-        }else if (result.winnerLetter === 'd') {
+        } else if (result.winnerLetter === "d") {
           otvet4.classList.add("active");
+          setTimeout(() => {
+            otvet4.classList.add("anim");
+          }, 200);
           otvet4.scrollIntoView({ block: "start", behavior: "smooth" });
         }
 
@@ -186,11 +198,9 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll("[data-cat]").forEach(function (workItem) {
           workItem.classList.remove("active");
         });
-
       } else {
         document.querySelectorAll("[data-cat]").forEach(function (workItem) {
           let workCat = workItem.dataset.cat;
-
 
           if (workCat == cat) {
             workItem.classList.add("active");
