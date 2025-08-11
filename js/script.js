@@ -2,16 +2,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const startBtn = document.querySelector(".master-top-btn");
   const restartBtn = document.querySelectorAll(".otvet-btn");
   const centerBlock = document.querySelector(".master-center");
+  const scrollTo = document.querySelector('.scroll-start')
   const slideLine = document.querySelector(".slide-line-sp");
   const slideNum = document.querySelector(".slide-num");
-  const kapOtvet =
     //================================== Start btn
 
     startBtn.addEventListener("click", () => {
       startBtn.classList.add("active");
       centerBlock.classList.add("active");
 
-      centerBlock.scrollIntoView({ block: "start", behavior: "smooth" });
+      scrollTo.scrollIntoView({ block: "start", behavior: "smooth" });
     });
 
   //================================== Restart btn
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     btn.addEventListener("click", () => {
       startBtn.classList.add("active");
       centerBlock.classList.add("active");
-      centerBlock.scrollIntoView({ block: "start", behavior: "smooth" });
+      scrollTo.scrollIntoView({ block: "start", behavior: "smooth" });
       document.querySelectorAll(".master-otvet").forEach((item) => {
         item.classList.remove("active");
       });

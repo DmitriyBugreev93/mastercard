@@ -206,7 +206,7 @@
   pointer-events: none;
   transform: translateX(150%);
   transition: transform .4s ease;
-  padding-bottom: 90px;
+  padding-bottom: 64px;
 }
 
 .card.btn .master-center-btn {
@@ -473,7 +473,7 @@
   }
 
   .master-top-icons img {
-    max-width: 28%;
+    /* max-width: 28%; */
     width: 100%;
   }
 
@@ -514,7 +514,7 @@
   }
 
   .card {
-    padding-bottom: 155px;
+    padding-bottom: 64px;
   }
 
 
