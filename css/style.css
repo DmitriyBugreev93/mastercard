@@ -375,6 +375,7 @@
   list-style-type: none;
   position: relative;
   margin-bottom: 24px;
+  line-height: 24px;
 }
 
 .otvet-list li::before {
@@ -384,7 +385,7 @@
   height: 12px;
   border-radius: 50%;
   background-color: #FF5F00;
-  top: 2px;
+  top: 6px;
   left: -21px;
 }
 
